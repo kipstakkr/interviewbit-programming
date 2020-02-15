@@ -1,0 +1,37 @@
+[flake8]
+
+# Print the total number of errors
+count = True
+
+# Set the maximum length that any line may be
+max-line-length = 99
+
+# Set the maximum length for docstrings & comments
+max-doc-length = 99
+
+# Set the maximum allowed McCabe complexity value for a code block
+max-complexity = 10
+
+# Files and folders for flake8 to ignore
+exclude = .git,
+          wenv/, env/,
+          __pycache__, .pytest_cache,
+          dist, build, *egg-info
+          htmlcov
+
+# Set the ordering of imports
+import-order-style = cryptography
+
+# Set the doc string convention to follow PEP257 standards
+docstring-convention = pep257
+
+# Count the no. of occurrences of each error/warning code and print a report
+statistics = True
+
+# No. of subprocess that flake will use to run checks in parallel
+jobs = 4
+
+# Ignore specific errors in files
+per-file-ignores =
+    # 'assert' is needed in tests. Doesn't make sense to use something else.
+    tests/*.py:S101

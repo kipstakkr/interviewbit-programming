@@ -11,7 +11,7 @@ Write a function to return the array of digits after incrementing the number by 
 
 Constraints
 -----------
-*   1 <= n <= 10 ** 9
+*   1 <= n <= 10 ** 7
 *   0 <= a[i] <= 9
 *   0 <= i < n
 

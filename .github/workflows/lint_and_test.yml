@@ -1,0 +1,27 @@
+name: build
+
+on: [push, create]
+
+jobs:
+
+  lint-and-test:
+
+    name: Linting and Testing
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.7.6'
+
+    - name: Lint with flake8
+      run: |
+        pip install -r requirements/requirements-style.txt
+        flake8
+
+    - name: Test with pytest
+      run: |
+        pip install -r requirements/requirements-test.txt
+        pytest --cov=programming --cov-branch --hypothesis-show-statistics

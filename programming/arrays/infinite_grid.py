@@ -36,7 +36,7 @@ def get_min_steps(array):  # T(n), S(1)
         start_x, start_y = array[index][0], array[index][1]
         end_x, end_y = array[index + 1][0], array[index + 1][1]
 
-        # using the formula for calculation chebyshev distance
+        # using the formula for calculating chebyshev distance
         steps += max(abs(start_x - end_x), abs(start_y - end_y))
 
     return steps

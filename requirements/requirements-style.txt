@@ -1,0 +1,29 @@
+### STYLE CHECKS ###
+flake8==3.7.9
+
+# plugin that checks import order against Python Style Guide
+flake8-import-order==0.18.1 #I
+
+# plugin that checks the content of the docstrings to match PEP
+flake8-docstrings==1.5.0 #D
+
+# plugin to find commented or dead code
+flake8-eradicate==0.2.4 #E
+
+# plugin to check if naming conventions follow PEP
+pep8-naming==0.9.1 #N
+
+# plugin for finding possible bugs & design problems in code
+flake8-bugbear==20.1.4 #B
+
+# plugin that helps to make variable names more readable
+flake8-variables-names==0.0.3 #VNE
+
+# plugin that checks for common security issues in code
+flake8-bandit==2.1.2 #B
+
+# checks  for python builtins being used as variables or parameters
+flake8-builtins==1.4.2 #A
+
+# plugin that helps you write better list/set/dict comprehensions
+flake8-comprehensions==3.2.2 #C

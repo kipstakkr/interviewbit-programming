@@ -9,6 +9,9 @@ jobs:
     name: Linting and Testing
     runs-on: ubuntu-latest
 
+    env:
+      CODECOV_TOKEN: '3fe3d3a8-b6cc-4adb-ac11-a8832e9d6c25'
+
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python
@@ -25,3 +28,4 @@ jobs:
       run: |
         pip install -r requirements/requirements-test.txt
         pytest --cov=programming --cov-branch --hypothesis-show-statistics
+        codecov --token=$CODECOV_TOKEN

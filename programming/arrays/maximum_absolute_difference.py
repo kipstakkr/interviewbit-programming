@@ -17,7 +17,7 @@ Constraints
 """
 
 
-def max_abs_diff(array):
+def max_abs_diff(array):  # T(n), S(1)
     """
     Return the maximum absolute difference value for the given array based on the formula.
 
@@ -32,7 +32,7 @@ def max_abs_diff(array):
 
     max_add, min_add = float('-Inf'), float('Inf')  # for the case of array[i] + i
     max_sub, min_sub = float('-Inf'), float('Inf')  # for the case of array[i] - i
-    for index in range(len(array)):
+    for index in range(len(array)):  # T(n)
 
         max_add = max(max_add, array[index] + index)
         min_add = min(min_add, array[index] + index)

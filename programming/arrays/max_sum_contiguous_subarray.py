@@ -18,34 +18,34 @@ Constraints
 """
 
 
-def is_non_negative(array):
+def is_non_negative(array):  # T(n), S(1)
     """Return a boolean which denotes whether all the elements in given array are non-negative."""
     return all(element >= 0 for element in array)
 
 
-def is_non_positive(array):
+def is_non_positive(array):  # T(n), S(1)
     """Return a boolean which denotes whether all the elements in given array are non-positive."""
     return all(element <= 0 for element in array)
 
 
-def max_subarray(array):
+def max_subarray(array):  # T(n), S(1)
     """Return the maximum possible sum with start and end indices of contiguous subarray."""
     # if all the elements in the array are non-positive
-    if is_non_positive(array):
+    if is_non_positive(array):  # T(n)
         max_sum = max(array)
         start_index = array.index(max_sum)
         end_index = start_index + 1
 
     # if all the elements in the array are non-negative
-    elif is_non_negative(array):
+    elif is_non_negative(array):  # T(n)
         max_sum = sum(array)
         start_index, end_index = 0, len(array)
 
     # if the elements are a combination of positive, negative and/or zero.
-    else:
+    else:  # T(n)
         max_sum, current_sum = 0, 0
         start_index, end_index = 0, 1
-        for current_index, current_element in enumerate(array):
+        for current_index, current_element in enumerate(array):  # T(n)
 
             # if the current sum is less than or equal to zero,
             # reset the current sum to start from the current element

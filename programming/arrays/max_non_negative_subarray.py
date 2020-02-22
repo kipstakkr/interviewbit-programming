@@ -49,6 +49,7 @@ def get_max_non_negative_subarray_sum(array):  # T(n), S(1)
             if element < 0:
                 current_sum = 0
                 current_start = index + 1
+                continue
 
             current_sum += element
             current_end = index + 1

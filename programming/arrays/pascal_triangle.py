@@ -33,15 +33,15 @@ Constraints
 """
 
 
-def generate_pascal_triangle(size):
+def generate_pascal_triangle(size):  # T(n ** 2), S(n)
     """Return the generated Pascal's triangle of the first `size` rows."""
     if not size:
         return []
 
     triangle = [[1]]
-    for row_index in range(size - 1):
-        row_elements = [1]
-        for index in range(1, len(triangle[row_index])):
+    for row_index in range(size - 1):  # T(n)
+        row_elements = [1]  # S(n)
+        for index in range(1, len(triangle[row_index])):  # T(n)
             current_element = triangle[row_index][index - 1] + triangle[row_index][index]
             row_elements.append(current_element)
         row_elements.append(1)

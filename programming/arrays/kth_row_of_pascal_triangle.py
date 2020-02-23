@@ -23,7 +23,7 @@ Constraints
 """
 
 
-def get_row_elements(row_index):
+def get_row_elements(row_index):  # T(n), S(1)
     """
     Return the given `row_index`th row elements of the Pascal's triangle.
 
@@ -35,7 +35,7 @@ def get_row_elements(row_index):
              n = row index
              r = index in the `n`th row
     """
-    row_elements = [1]  # S(n)
+    row_elements = [1]
     for index in range(row_index):  # T(n)
         element = (row_elements[index] * (row_index - index)) // (index + 1)
         row_elements.append(element)

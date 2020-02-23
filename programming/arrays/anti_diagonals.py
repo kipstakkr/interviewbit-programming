@@ -31,15 +31,15 @@ Constraints
 """
 
 
-def get_anti_diagonal_matrix(matrix):
+def get_anti_diagonal_matrix(matrix):  # T(n ** 2), S(1)
     """Return the anti-diagonal matrix formed from the given matrix."""
     matrix_size = len(matrix)
 
     diagonal_matrix_size = 2 * (matrix_size - 1) + 1
     diagonal_matrix = [[] for _ in range(diagonal_matrix_size)]
 
-    for row_index in range(matrix_size):
-        for column_index in range(matrix_size):
+    for row_index in range(matrix_size):  # T(n)
+        for column_index in range(matrix_size):  # T(n)
             diagonal_row_index = row_index + column_index
             diagonal_matrix[diagonal_row_index].append(matrix[row_index][column_index])
 

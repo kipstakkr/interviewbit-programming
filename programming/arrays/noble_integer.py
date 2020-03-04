@@ -3,15 +3,17 @@ Contains the solution to problem 12 of the array section.
 
 Problem
 -------
-Given an integer array `A`, find if an integer `p` exists in the array such that the number of
-integers greater than `p` in the array equals to `p`. If such an integer is found, return `1`
-else return `-1`.
+Given an integer array `A` containing `N` elements, find if an integer `p` exists in the array
+such that the number of integers greater than `p` in the array equals to `p`. If such an integer
+is found, return `1` else return `-1`.
 
 Write a function to return an integer (either `1` or `-1`) based on the above condition.
 
 Constraints
 -----------
-*   1 <= len(A) <= 10 ** 5
+*   1 <= N <= 10 ** 5
+*   -10 ** 4 <= A[i] <= 10 ** 4
+*   0 <= i < N
 
 """
 

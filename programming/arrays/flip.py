@@ -14,7 +14,8 @@ maximised.
 Write a function to return an array consisting of two elements denoting `L` and `R`, in which the
 number of `1`s in the given string in the range `L` and `R` is maximized.
 
-Note:-
+Note
+----
 1.  If you don’t want to perform the operation, return an empty array/tuple.
 2.  If there are multiple solutions, return the lexicographically smallest pair of `L` and `R`.
 3.  Pair (a, b) is lexicographically smaller than pair (c, d) if a < c (or) if a == c and b < d.

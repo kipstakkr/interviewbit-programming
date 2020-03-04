@@ -23,14 +23,14 @@ Constraints
 """
 
 
-def check_triplet_exists(array):
+def check_triplet_exists(array):  # T(n), S(1)
     """Return an integer (`1` or `0`) by checking whether a triplet exists in the array or not."""
     # if there is no triplet possible in the array
     if len(array) < 3:
         return 0
 
     triplet = sorted(float(string) for string in array[:3])
-    for index in range(3, len(array) + 1):
+    for index in range(3, len(array) + 1):  # T(n)
 
         triplet_sum = sum(triplet)
         if 1 < triplet_sum < 2:
